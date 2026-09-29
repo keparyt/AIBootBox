@@ -1,0 +1,36 @@
+version: 1
+
+system:
+  hostname: aibox
+  mode: headless
+
+network:
+  require_before_ai: true
+  management:
+    webui_port: 3000
+    api_port: 4000
+  expose_ollama_to_lan: false
+
+storage:
+  data_path: /srv/aibox-data
+  require_data_mount: true
+
+gpu:
+  backend: auto
+  require_gpu: true
+
+services:
+  docker: true
+  ollama: true
+  litellm: true
+  open_webui: true
+
+startup:
+  boot_target: aibox.target
+  auto_start_models: false
+  fail_fast: false
+
+logging:
+  level: INFO
+  directory: /var/log/aibox
+
