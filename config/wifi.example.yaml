@@ -1,0 +1,24 @@
+# Copy this file to the AIBOX-CONFIG partition as wifi.yaml.
+# Plaintext credentials are supported by the MVP.
+#
+# Security warning:
+# anyone with physical access to the USB can read this file.
+
+version: 1
+
+network:
+  mode: wifi
+
+wifi:
+  ssid: "YOUR_WIFI_SSID"
+  password: "YOUR_WIFI_PASSWORD"
+  hidden: false
+
+# Leave null for automatic adapter selection.
+interface: null
+
+startup:
+  interactive_fallback: true
+  connection_timeout_seconds: 30
+  retry_count: 3
+
