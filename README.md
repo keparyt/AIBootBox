@@ -48,7 +48,7 @@ READY
 - NetworkManager and nmcli for network management
 - Docker only where containerization is useful
 
-Debian 13 is the current stable release as of September 2026.
+Debian 13 is the current stable release as of September 2026. Release-specific implementation builds should pin the exact Debian point release and package versions that were tested.
 
 ## Core principles
 
@@ -67,6 +67,7 @@ Debian 13 is the current stable release as of September 2026.
 
 - Architecture: docs/ARCHITECTURE.md
 - Boot and startup: docs/BOOT.md
+- Installation: docs/INSTALLATION.md
 - Network and Wi-Fi: docs/NETWORK.md
 - AI stack: docs/AI-STACK.md
 - Storage: docs/STORAGE.md
@@ -102,4 +103,3 @@ The custom AIBootBox code should remain small and diagnosable.
 - NetworkManager: https://networkmanager.pages.freedesktop.org/NetworkManager/
 
 Versions used for releases should be pinned and recorded rather than relying on floating latest tags.
-
